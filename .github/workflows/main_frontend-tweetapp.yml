@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'Frontend-Tweetapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CD9C9320BF5B495A83FA1573D70006DD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4BA55A9BB0D43F19369358F05F537AC }}
           package: .
