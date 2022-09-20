@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl : 'https://backend-tweet.azurewebsites.net/'
+  baseUrl : 'https://backend-tweet.azurewebsites.net'
 }; 
 
 /*
