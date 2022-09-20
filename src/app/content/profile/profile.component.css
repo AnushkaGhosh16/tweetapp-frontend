@@ -1,0 +1,160 @@
+.info{
+    width: 25em;
+    height: 38em;
+    background: rgba(135, 192, 230, 0.267);
+    top: 50%;
+    left: 15%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 3em 3em;
+}
+h2{
+    text-align: center;
+}
+#home{
+    margin-top: 1.5em;
+    margin-right: 1em;
+    float: right;
+    height: 2.35em;
+    border-style:none;
+    background-color: rgb(66, 173, 245);
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+.list-group-item{
+    margin-top: 2em;
+}
+svg{
+    margin-top: 2em;
+    margin-bottom: 0em;
+   margin-left: 2em;
+    height: 15em;
+    
+}
+#status{
+    margin-left: 22em;
+    width: 61%;
+    height: 4em;
+}
+#tag{
+    margin-top: 2.5em;
+    margin-left: 22em;
+    width: 61%;
+  
+}
+#button{
+    float: left;
+    margin-left: 22em;
+}
+.tweets{
+    margin-left: 34em;
+    margin-top: 5em;
+    width: 50%;
+    padding-right: 5em;
+    
+}
+#message{
+    width: 61%;
+    margin-left: 22em;
+}
+#texts{
+    border-color: rgba(103, 117, 240, 0.575);
+    border-width: 5px;
+    border-style:inset;
+    background: linear-gradient(90deg, rgb(225, 235, 241),rgba(139, 200, 241, 0.795));
+}
+#mytweet{
+    margin-left: 8em;
+    font-size: 1.5em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-style: italic;
+    color:rgba(47, 84, 247, 0.897);
+}
+#errors{
+    margin-left: 10.3em;
+    font-size: 1.1em;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    color:rgba(247, 47, 87, 0.897);
+}
+#delete{
+    float:right;
+    margin-top: 0.2em;
+    position:relative;
+    padding: 1 1 1 1;
+}
+#update{
+    margin-top: 0.8em;
+    margin-left: 12px;
+    position:relative;
+    left: 150px;
+    bottom: 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* width: 20em; */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(72, 134, 248);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  #list{
+    list-style-type: none;
+    padding-right: 40px;
+    border: none;
+    background-color: rgb(72, 134, 248);
+    color: white;
+  }
+#tweet{
+    font-family: cursive;
+    font-size: 17px;
+    font-weight: bold;
+}
+#time{
+    font-family:Arial;
+    font-size: 14px;
+    font-weight: 500;
+}
+#name{
+    font-family:sans-serif;
+    font-size: 30px;
+    font-weight:bolder;
+    color: rgb(93, 16, 124);
+}
+#username{
+    font-family:sans-serif;
+    font-size: 17px;
+    font-weight:bolder;
+    color: rgb(93, 16, 124);
+}
+#reply-section{
+    background-color: rgba(148, 157, 236, 0.582);
+    
+}
+#reply{
+    font-family: cursive;
+    font-size: 17px;
+    font-weight: bold;
+}
+#uname{
+    font-family:sans-serif;
+    font-style: italic;
+    font-size: 19px;
+    font-weight:bolder;
+    color: rgb(93, 16, 124);
+}

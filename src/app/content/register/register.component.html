@@ -1,0 +1,28 @@
+<body>
+
+    <div class="register-box">
+  
+      <h3>Register</h3>
+      <form (ngSubmit)="register()">
+        <p>Login ID</p>
+        <input type="number" name="loginId" [(ngModel)]="user.loginId" placeholder="Enter your login ID">
+        <p>First Name</p>
+        <input type="text" [(ngModel)]="user.firstName" name="firstName" placeholder="Enter your first name">
+        <p>Last Name</p>
+        <input type="text" [(ngModel)]="user.lastName" name="lastName" placeholder="Enter your last name">
+        <p>Username</p>
+        <input type="text" [(ngModel)]="user.userName" name="userName" placeholder="Enter your user name">
+        <p>Email</p>
+        <input type="email" [(ngModel)]="user.email" name="email" placeholder="Enter your email">
+        <p>Password</p>
+        <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter your password">
+        <p>Confirm Password</p>
+        <input type="password" [(ngModel)]="user.confirmPassword" name="confirmPassword" placeholder="Confirm password">
+        <p>Phone number</p>
+        <input type="number" name="number" [(ngModel)]="user.number" placeholder="Enter your phone number">
+        <span>{{error}}</span>
+        <button type="submit" name="register" >Register</button>
+        <a routerLink="/login"><h6>Click to Login</h6></a>
+      </form>
+    </div>
+  </body>

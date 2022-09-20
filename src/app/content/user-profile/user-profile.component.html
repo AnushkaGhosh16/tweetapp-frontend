@@ -1,0 +1,48 @@
+<div class="info">
+    <li class="list-group-item" *ngFor="let u of user">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 24 20">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        <h2 id="names">{{u.firstName}} {{u.lastName}} </h2><br>
+        <span id="username"><b>Username: </b>{{u.userName}}</span> <br><br>
+        <span id="username"><b>Email ID:</b> {{u.email}}</span>
+            
+    </li>
+
+</div>
+
+<span> 
+    
+    <button id="home" class="btn btn-primary" (click)="goToHome()">Go To Home</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="back" class="btn btn-primary" (click)="goToAllUsers()">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<div class="tweets">
+    
+    <h5 id="mytweet">Tweets</h5>
+    <span id="errors" *ngIf="this.tweet.length === 0">No tweet found</span>
+    <li id="texts" class="list-group-item" *ngFor="let t of tweet">
+        
+        <span id="tweet">{{t.tweet}} {{t.tweetTag}}</span><br><br>
+        <span id="time">{{t.postedAt}} </span><br><br>
+        <div class="dropdown">
+            <span>Likes: {{t.likes}}</span>&nbsp;
+            <div class="dropdown-content">
+                <ul id="list" *ngFor="let te of t.likedBy">
+                    <li id="item">{{te}}</li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn btn-success" (click)="like(t.userName,t.tweetId)">Like</button>&nbsp;
+        <button class="btn btn-success" (click)="goToReply(t.userName,t.tweetId)">Reply</button><br><br>
+        <span style="font-size: large; color: rgb(179, 24, 24);"><b>Reply section</b></span><br><br>
+    <div id="reply-section"> 
+        <span *ngFor="let tw of t.replies">
+           
+            <span id="name">@{{tw.userName}} </span><br><br>
+            <span id="tweet">{{tw.tweet}} </span><br><br> 
+            <span id="time">{{tw.postedAt}} </span><br><br> 
+        </span>
+    </div>             
+    </li>
+</div>

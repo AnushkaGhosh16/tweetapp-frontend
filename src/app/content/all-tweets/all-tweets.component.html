@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="input-group">
+        <div class="form-outline div">
+            <input type="search" id="search" class="form-control" placeholder="Search by username" [(ngModel)]="userName">
+        </div>
+        <button id="search-button" type="button" class="btn btn-primary" (click)="view()">
+            Search
+        </button>
+        
+        <span> 
+            <button id="home" class="btn btn-primary" (click)="goToHome()">Go To Home</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        </span>
+     
+        
+    </div>
+      
+    <br />
+    <!-- <div *ngIf="searchMessage" class="alert alert-warning">{{searchMessage}}</div> -->
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let t of tweets">
+        
+            <span id="name">{{t.userName}} </span><br><br>
+            <span>{{t.tweet}} {{t.tweetTag}} </span><br><br>
+            <span>{{t.postedAt}} </span><br><br>
+            <span>Likes: {{t.likes}} </span><br><br>
+            <span *ngFor="let tw of t.replies">
+                <span><b>Reply section</b></span><br>
+                <span>{{tw.userName}} </span><br><br>
+                <span>{{tw.tweet}} </span><br><br> 
+            </span>
+        </li>
+    </ul>
+</div>
+
+    
+    

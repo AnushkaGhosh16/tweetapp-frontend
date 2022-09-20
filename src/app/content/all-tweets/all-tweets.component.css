@@ -1,0 +1,35 @@
+h5{
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
+
+.div{
+    padding-right: 1%;
+}
+.bt{
+    margin-right: 1%;
+}
+#search-button{
+    margin-top: 2em;
+    float: right;
+    height: 2.35em;
+    border-style:none;
+    background-color: rgb(66, 173, 245);
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+#search{
+    margin-top: 2em;
+}
+#home{
+    margin-top: 2em;
+    float: right;
+    height: 2.35em;
+    border-style:none;
+    background-color: rgb(66, 173, 245);
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+

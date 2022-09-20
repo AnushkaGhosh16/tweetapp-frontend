@@ -1,0 +1,22 @@
+
+<div class="container">
+   
+    <div class="form-group" id="status">
+        <div>
+            <span style="color: rgb(30, 105, 245); font-size: large;">Replying to @{{this.replyName}}</span>
+        </div>
+        <textarea style="margin-bottom:10px;" class="form-control" rows="3" maxlength="144" placeholder="Type your reply here..."
+            [(ngModel)]="newTweet.tweet"></textarea>
+            <span id="max" *ngIf="newTweet.tweet.length===144">Max characters achieved</span>
+    </div><br>
+    <div class="form-group" id="tag">
+        <textarea class="form-control" rows="2" maxlength="50" placeholder="Add tags (Optional)"
+            [(ngModel)]="newTweet.tweetTag"></textarea>
+            <span id="max" *ngIf="newTweet.tweetTag.length===50">Max characters achieved</span>
+    </div>
+    <div id="message" *ngIf=tweetInValid class="alert alert-warning">{{messageForTweet}}
+    </div>
+    <div>
+        <button id="button" class="btn btn-success" (click)="reply()">Reply</button>
+    </div>
+</div>

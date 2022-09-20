@@ -1,0 +1,20 @@
+<body>
+
+  <div class="login-box">
+
+    <h3>Login</h3>
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    <form (ngSubmit)="login()">
+      <p>Username</p>
+      <input type="text" [(ngModel)]="user.userName" name="userName" placeholder="Enter your username...">
+      <!-- <span class="text-danger">Username is required</span> -->
+      <p>Password</p>
+      <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter your password...">
+      <!-- <span class="text-danger">Password is required</span> -->
+      <span>{{error}}</span>
+      <button type="submit" name="login">Login</button>
+      <a routerLink="/forgot">Forgot your password?</a>
+      <a routerLink='/register'>Click here to sign up</a>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,99 @@
+body {
+    margin: 1.5em;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #7790e0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  h1 {
+    font-weight: bold;
+    font-size: 3em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+  
+  .register-box {
+    width: 35em;
+    height: 72em;
+    background: rgba(135, 192, 230, 0.267);
+    top: 87%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 3em 3em;
+    border-radius: 5%;
+  }
+  
+  .register-image {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    position: absolute;
+    top: -3.7em;
+    left: calc(50% - 3.7em);
+  }
+  
+  h3 {
+    margin: 0 auto;
+    padding: 0.5em 0;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .register-box p {
+    margin: 0;
+    padding: 1em 0;
+    font-weight: bold;
+  }
+  
+  .register-box input {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  
+  .register-box input[type="text"],
+  input[type="password"] {
+    border: none;
+    border-bottom: 1.2px solid rgb(55, 137, 230);
+    background: transparent;
+    outline: none;
+    height: 2em;
+    color: rgb(44, 130, 228);
+    font-size: 16px;
+  }
+  
+  .register-box button[type="submit"] {
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 2.5em;
+    background: rgb(44, 130, 228);
+    color: white;
+    font-size: 1em;
+  
+  }
+  
+  .register-box button[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(76, 147, 228);
+    color: white;
+  }
+  
+  .register-box a {
+    text-decoration: none;
+    font-size: 0.75em;
+    line-height: 1.7em;
+    color: rgb(71, 150, 240);
+    display: flex;
+    flex-direction: vertical;
+  }
+  
+  .register-box a:hover {
+    color: rgb(136, 174, 218);
+  }
+  

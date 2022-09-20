@@ -1,0 +1,78 @@
+<header>
+   
+        <h1 class="logo">
+         TweetApp
+        </h1>
+        <nav>
+         <button><a routerLink="/profile/{{this.user}}">My Profile</a></button>
+         <button><a routerLink="/users/all/{{this.user}}">All Users</a></button>
+         <!-- <button><a routerLink="/all">Tweets</a></button>  -->
+         <button><a routerLink="/logout">Logout</a></button>
+        </nav>
+       
+</header>
+<table>
+    <tr>
+        <td id="table">
+            <div><span style="font-family: cursive; font-size: large; color: darkblue; margin-left: 1em;">Welcome @{{this.user}}!</span></div><br>
+            <div class="container">
+                <div class="form-group" id="status">
+                    <textarea class="form-control" rows="3" maxlength="144" placeholder="What's going on your mind?"
+                        [(ngModel)]="tweets.tweet"></textarea>
+                        <span id="max" *ngIf="tweets.tweet.length===144">Max characters achieved</span>
+                </div>
+                <div class="form-group" id="tag">
+                    <textarea class="form-control" rows="2" maxlength="50" placeholder="Add tags (Optional)"
+                        [(ngModel)]="tweets.tweetTag"></textarea>
+                        <span id="max" *ngIf="tweets.tweetTag.length===50">Max characters achieved</span>
+                </div>
+                <div id="message1" *ngIf=tweetInValid class="alert alert-warning">{{messageForTweet}}
+                </div>
+                <div>
+                    <button class="btn btn-success" (click)=postTweet()>Post Tweet</button>
+                </div>
+                <div class="form-outline div">
+                    <input type="search" id="search" class="form-control" placeholder="Search by username" [(ngModel)]="userName">
+                </div>
+                <button id="search-button" type="button" class="btn btn-primary" (click)="view()">
+                    Search
+                </button>
+            </div>&nbsp;
+             <div id="message" *ngIf="searchMessage" class="alert alert-warning">{{searchMessage}}</div>
+        </td>
+        <td id="all">
+            <div  id="every" *ngFor="let t of tweet">
+            <!-- <ul class="list-group">
+                <li class="list-group-item" *ngFor="let t of tweet"> -->
+                
+                    <span id="name">@{{t.userName}} </span><br><br>
+                    <span id="tweet">{{t.tweet}} {{t.tweetTag}} </span><br><br>
+                    <span id="time">{{t.postedAt}} </span><br><br>
+                    <div class="dropdown">
+                        <span>Likes: {{t.likes}}</span>&nbsp;
+                        <div class="dropdown-content">
+                            <ul id="list" *ngFor="let te of t.likedBy">
+                                <li id="item">{{te}}</li>
+                            </ul>
+                        </div>
+                    </div>&nbsp;
+                <button id="like" class="btn btn-success" (click)="like(t.userName,t.tweetId)">Like</button>&nbsp;
+                        <button id="reply" class="btn btn-success" (click)="goToReply(t.userName,t.tweetId)">Reply</button><br><br>
+                    <div id="reply-section">
+                        <span style="font-size: large; color: rgb(179, 24, 24);"><b>Reply section</b></span><br><br>
+                            <span *ngFor="let tw of t.replies">
+                        
+                            <span id="name">@{{tw.userName}} </span><br><br>
+                            <span id="tweet">{{tw.tweet}} </span><br><br> 
+                            <span id="time">{{tw.postedAt}} </span><br><br> 
+                        </span>
+                    </div>
+                    <hr class="line">
+                </div>
+                
+                <!-- </li>
+            </ul> -->
+        </td>
+    </tr>
+</table>
+

@@ -1,0 +1,35 @@
+
+
+<div class="container">
+    <div class="input-group">
+        <div class="form-outline div">
+            <input type="search" id="search" class="form-control" placeholder="Search by username"  [(ngModel)]="userName">
+        </div>
+        <button id="search-button" type="button" class="btn btn-primary" (click)="search()">
+            Search
+        </button>
+        
+        <span> 
+            <button id="home" class="btn btn-primary" (click)="goToHome()">Go To Home</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        </span>
+     
+        
+    </div>
+      
+    <br />
+    <div *ngIf="searchMessage" class="alert alert-warning">{{searchMessage}}</div>
+    <ul class="list-group">
+        <div *ngIf="noUser" class="alert alert-warning">{{noUser}}</div>
+        <li class="list-group-item" *ngFor="let u of user">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>&nbsp;
+            <span id="name">{{u.firstName}} {{u.lastName}} </span><br><br>
+            <button id="names" class="btn btn-link" (click)="goToProfile(u.userName)">@{{u.userName}}</button>
+                
+            
+        </li>
+    </ul>
+</div>
