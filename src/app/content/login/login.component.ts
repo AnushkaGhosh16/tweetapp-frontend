@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/shared-service/authentication.service';
 import { SharedServiceService } from 'src/app/shared-service.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
   error:string = "";
   errorMessage = 'Invalid Credentials'
   invalidLogin = false
-
+  error1:string=""
   constructor(private router: Router, private autheneticationService: AuthenticationService,private sharedService:SharedServiceService) { }
  
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.user.userName.length==0 || this.user.password.length==0){
-    this.error='Please fill up all the fields'
+    this.error1='Please fill up all the fields'
     return;
     }
     else{
@@ -40,9 +41,9 @@ export class LoginComponent implements OnInit {
           this.invalidLogin = false
         }else{
           this.invalidLogin = true
-          this.error=data.message;
+          this.error1=data.message;
           }
-       });
+       },error=>{this.error1=error.error.message});
       }
     }
 
